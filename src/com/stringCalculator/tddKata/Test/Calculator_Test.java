@@ -49,11 +49,11 @@ public class Calculator_Test
     {
         try
         {
-            m1.Add("-1,2,3,-5");
+            m1.Add("-1,2,3,-5,-7");
         }
         catch(IllegalArgumentException e)
         {
-            assertEquals("Negatives Not Allowed: [-1, -5]",e.getMessage());
+            assertEquals("Negatives Not Allowed: [-1, -5, -7]",e.getMessage());
         }
     }
 
