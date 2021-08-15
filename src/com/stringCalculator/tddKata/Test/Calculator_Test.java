@@ -30,4 +30,10 @@ public class Calculator_Test
     {
         assertEquals(250,m1.Add("10, 50, 90, 100"));
     }
+
+    @Test
+    public void testHandleNewLines()
+    {
+        assertEquals(6,m1.Add("1\n2,3"));
+    }
 }

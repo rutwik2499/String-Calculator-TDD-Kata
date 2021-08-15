@@ -15,7 +15,7 @@ public class Calculator
         else
         {
             numbers=numbers.replaceAll(" ","");
-            String[] arr=numbers.split(",");
+            String[] arr=numbers.split(",|\n");
             return getSum(arr);
         }
     }
