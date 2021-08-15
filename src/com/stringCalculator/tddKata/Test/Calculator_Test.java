@@ -14,13 +14,13 @@ public class Calculator_Test
     }
 
     @Test
-    public void testSingleNumberString() // 1
+    public void testSingleNumberString()
     {
         assertEquals(5,m1.Add("5"));
     }
 
     @Test
-    public void testTwoNumbersString() // 1
+    public void testTwoNumbersString()
     {
         assertEquals(12,m1.Add("5,7"));
     }
