@@ -36,4 +36,11 @@ public class Calculator_Test
     {
         assertEquals(6,m1.Add("1\n2,3"));
     }
+
+    @Test
+    public void testDifferentDelimitersString()
+    {
+        assertEquals(3,m1.Add("//;\n1;2"));
+        assertEquals(12,m1.Add("//;\n2;10"));
+    }
 }
