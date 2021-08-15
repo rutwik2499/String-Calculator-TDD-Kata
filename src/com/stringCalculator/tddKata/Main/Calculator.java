@@ -36,7 +36,7 @@ public class Calculator
                 }
                 else
                 {
-                    sum += Integer.parseInt(s);
+                    if(Integer.parseInt(s)<=1000) sum += Integer.parseInt(s);
                 }
             }
 
@@ -64,8 +64,10 @@ public class Calculator
     {
         int sum=0;
         for (String number : numbers) {
-            if(isNumeric(number))
-                sum+=Integer.parseInt(number);
+            if(isNumeric(number) && Integer.parseInt(number)<=1000)
+            {
+                sum += Integer.parseInt(number);
+            }
         }
         return sum;
     }

@@ -56,4 +56,12 @@ public class Calculator_Test
             assertEquals("Negatives Not Allowed: [-1, -5]",e.getMessage());
         }
     }
+
+    @Test
+    public void testIgnoreNumbersMoreThanThousand() // 6
+    {
+        assertEquals(3,m1.Add("1,2,1005"));
+        assertEquals(12,m1.Add("//;\n2;10;1008"));
+
+    }
 }
