@@ -12,4 +12,10 @@ public class Calculator_Test
     {
         assertEquals(0,m1.Add(""));
     }
+
+    @Test
+    public void testSingleNumberString() // 1
+    {
+        assertEquals(5,m1.Add("5"));
+    }
 }
