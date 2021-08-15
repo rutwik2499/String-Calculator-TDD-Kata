@@ -18,4 +18,10 @@ public class Calculator_Test
     {
         assertEquals(5,m1.Add("5"));
     }
+
+    @Test
+    public void testTwoNumbersString() // 1
+    {
+        assertEquals(12,m1.Add("5,7"));
+    }
 }
