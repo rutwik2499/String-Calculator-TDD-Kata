@@ -24,4 +24,10 @@ public class Calculator_Test
     {
         assertEquals(12,m1.Add("5,7"));
     }
+
+    @Test
+    public void testMultiNumbersString()
+    {
+        assertEquals(250,m1.Add("10, 50, 90, 100"));
+    }
 }
