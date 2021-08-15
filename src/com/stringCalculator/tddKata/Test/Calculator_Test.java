@@ -43,4 +43,17 @@ public class Calculator_Test
         assertEquals(3,m1.Add("//;\n1;2"));
         assertEquals(12,m1.Add("//;\n2;10"));
     }
+
+    @Test
+    public void testNegativeNumbersString()
+    {
+        try
+        {
+            m1.Add("-1,2,3,-5");
+        }
+        catch(IllegalArgumentException e)
+        {
+            assertEquals("Negatives Not Allowed: [-1, -5]",e.getMessage());
+        }
+    }
 }
