@@ -58,10 +58,23 @@ public class Calculator_Test
     }
 
     @Test
-    public void testIgnoreNumbersMoreThanThousand() // 6
+    public void testIgnoreNumbersMoreThanThousand()
     {
         assertEquals(3,m1.Add("1,2,1005"));
         assertEquals(12,m1.Add("//;\n2;10;1008"));
 
+    }
+
+    @Test
+    public void testDelimitersOfAnyLength()
+    {
+        assertEquals(6,m1.Add("//[***]\n1***2***3"));
+    }
+
+    @Test
+    public void testMultipleDelimitersOfAnyLength()
+    {
+        assertEquals(6,m1.Add("//[*][%]\n1*2%3"));
+        assertEquals(16,m1.Add("//[***][+++][%%%]\n1***2***3+++5%%%5"));
     }
 }
